@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de juego</title>
+  <link rel="stylesheet" href="modal.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <main>
+    <h1>Juegos</h1>
+
+    <article class="tarjeta">
+      <div class="tarjeta-interior">
+
+        <!-- Frente -->
+        <section class="tarjeta-frente" aria-label="Frente de la tarjeta">
+          <img src="imagenes/juego.jpg" alt="Imagen del juego">
+          <h2>Nombre del juego</h2>
+        </section>
+
+        <!-- Reverso -->
+        <section class="tarjeta-reverso" aria-label="Información breve del juego">
+          <h2>Nombre del juego</h2>
+          <p>Una breve descripción del juego.</p>
+          <button type="button" class="boton-info"
+                  aria-haspopup="dialog" aria-controls="modal-juego">
+            Más información
+          </button>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- El modal va fuera de la tarjeta para no afectar su giro 3D -->
+  <dialog id="modal-juego" class="modal-juego"
+          aria-labelledby="titulo-modal">
+    <div class="modal-contenido">
+      <button type="button" class="modal-cerrar" aria-label="Cerrar">
+        ×
+      </button>
+
+      <h2 id="titulo-modal">Nombre del juego</h2>
+
+      <section class="modal-seccion">
+        <h3>Tutorial</h3>
+        <!-- Reemplaza por tu imagen o video -->
+        <video controls>
+          <source src="videos/tutorial.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+      </section>
+
+      <section class="modal-seccion">
+        <h3>Objetivos del juego</h3>
+        <p>Escribe aquí los objetivos del juego.</p>
+      </section>
+
+      <section class="modal-seccion">
+        <h3>Reglas para los papás</h3>
+        <p>Escribe aquí las reglas para los papás.</p>
+      </section>
+    </div>
+  </dialog>
+
+</body>
+</html>
+

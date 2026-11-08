@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/fon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* TÍTULO GRANDE */
+.main-header {
+    background: rgba(15, 17, 26, 0.95);
+    padding: 2rem 2rem;
+    text-align: center;
+    border-bottom: 0.2rem solid #00e5ff;
+}
+
+.main-header h1 {
+    font-family: 'Qilka', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #00e5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-header .subtitle {
+    font-size: 2rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+.mosaico-wrapper {
+    padding: 2rem;
+    background: rgba(15, 17, 26, 0.85);
+    border-radius: 1.5rem;
+    border: 1.5rem solid;
+    border-image: linear-gradient(135deg, #fc0341ee, #f4f801, #01d124) 1;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+}
+
+/* TABLERO */
+.mosaico-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10rem, 14rem));
+    grid-template-rows: repeat(3, minmax(10rem, 14rem));
+    gap: 1.5rem;
+}
+
+/* TARJETAS 3D */
+.flip-card {
+    position: relative;
+    perspective: 100rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.flip-card-back {
+    background: #6f00ff;
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back.info-aux {
+    background: #90ee90;
+    color: #06070a;
+}
+
+.flip-card-back h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.flip-card-back p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.flip-card-back .btn {
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+.flip-card-back .btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .mosaico-grid {
+        grid-template-columns: repeat(2, 16rem);
+        grid-template-rows: auto;
+    }
+    .centro-chakana { display: none; }
+}
+
+/*   PASCUA  */
+.logo-interactivo {
+    cursor: pointer;
+}
+#huevo-pascua-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#cerrar-sorpresa {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+#texto-sorpresa {
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 40px; /* Ajustado un poco más arriba para dar espacio al texto galáctico */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+#video-personaje {
+    display: none;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+.espacio-starwars {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 500px;
+    perspective-origin: 50% 20%;
+    z-index: 999;
+}
+.creditos-starwars {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #f5c518;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 28px; 
+    line-height: 1.8;
+    transform: translateX(-50%) rotateX(20deg);
+    transform-origin: 50% 100%;
+}
+
+/* Animación fluida de 40 segundos */
+@keyframes avanceCreditos {
+    0%   { top: 100%;  opacity: 1; }
+    90%  { opacity: 1; }
+    100% { top: -180%; opacity: 0; }
+}
+
+.flip-card-back .btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background-color: #FFEE00;
+    color: #000000;            
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10;
+    position: relative;
+}
+
+.flip-card-back .btn:hover {
+    background-color: #FFFFFF;
+    transform: scale(1.08);
+}
+
+.emoji-quirquincho {
+  height: 1.4em;          
+  width: auto;
+  vertical-align: middle;   
+  display: inline-block;
+  margin: 0 4px;            
+}
+
+.modconte{
+max-width: 100%;
+width: 250px;
+height: auto;
+display: block;
+margin: 0 auto;
+}

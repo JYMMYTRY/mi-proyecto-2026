@@ -1,0 +1,227 @@
+/* RESET GENERAL */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #06070a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO GRANDE */
+.main-header {
+    background: #0f111a;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 0.2rem solid #00e5ff;
+}
+
+.main-header h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    background: linear-gradient(45deg, #00e5ff, #6f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.main-header .subtitle {
+    font-size: 2.5rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/* MENÚ NAVBAR HIGH-TECH */
+nav.gx-navbar {
+    background: #0b0c10;
+    border-bottom: 0.1rem solid rgba(0, 230, 255, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gx-btn {
+    position: relative;
+    background: #12141c;
+    color: #a0a5b5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 0.1rem solid #4c00c7;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.gx-btn::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 110%; height: 300%; background: #6f00ff;
+    border-radius: 50%; transition: transform 0.5s ease; z-index: -1;
+}
+
+.gx-btn span { position: relative; z-index: 2; }
+.gx-btn:hover { color: #ffffff; border-color: #00e5ff; box-shadow: 0 0 1.5rem rgba(0, 229, 255, 0.5); }
+.gx-btn:hover::after { transform: translate(-50%, -50%) scale(2.5); border-radius: 0; }
+.gx-btn.active { color: #ffffff; background: #6f00ff; border-color: #00e5ff; }
+
+/* CONTENEDOR CON MÁRGENES Y BORDE DEGRADADO */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.mosaico-wrapper {
+    padding: 2rem;
+    background: #0f111a;
+    border-radius: 1.2rem;
+    
+    /* Bordes con degradación */
+    border: 2.5rem solid;
+    border-image: linear-gradient(135deg, #fc0341ee, #f4f801, #01d124) 1;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
+}
+
+/* TABLERO DE AJEDREZ / ESTRUCTURA DE REJILLA */
+.mosaico-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 22rem);
+    grid-template-rows: repeat(3, 22rem);
+    gap: 1.5rem;
+}
+
+/*    POSICIONAMIENTO RELATIVO Y ABSOLUTO  */
+.flip-card {
+    position: relative; /* Base obligatoria para los hijos absolutos */
+    perspective: 100rem; /* Activa el entorno tridimensional */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d; /* Permite que las caras coexistan en 3D */
+}
+
+/* Al pasar el cursor, la tarjeta gira 180 grados sobre su eje Y */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+
+/* CARAS FRONTALES Y TRASERAS: POSICIONAMIENTO ABSOLUTO */
+.flip-card-front, .flip-card-back {
+    position: absolute; /* Superpone una cara encima de la otra */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; /* Oculta la cara que queda al revés */
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* CARA FRONTAL: Configuración de la imagen */
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+
+/* Casillas blancas decorativas del tablero de ajedrez */
+.flip-card-front.blanco {
+    background: #1c1f2f;
+    border: 0.1rem dashed rgba(0, 230, 255, 0.3);
+}
+
+.flip-card-front .icon {
+    font-size: 10rem;
+    filter: drop-shadow(0 0 1rem rgba(0,230,255,0.4));
+}
+
+.imagen-fija {
+    padding: auto;
+    width: 20rem; /* Ancho fijo */
+    height: 20rem; /* Alto fijo */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.card-label {
+    position: absolute;
+    bottom: 1.5rem;
+    background: rgba(6, 7, 10, 0.85);
+    padding: 0.4rem 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border-radius: 0.4rem;
+    border-bottom: 0.2rem solid #ff1b55;
+}
+
+.card-label.central {
+    border-color: #00e5ff;
+    font-size: 1.3rem;
+}
+
+/* CARA TRASERA: Revelación de la información técnica */
+.flip-card-back {
+    background: #6f00ff; /* Fondo morado para las imágenes principales */
+    color: #ffffff;
+    transform: rotateY(180deg); /* Invierte la cara trasera por defecto */
+}
+
+/* Variación de color para las casillas de información auxiliares */
+.flip-card-back.info-aux {
+    background: #00e5ff;
+    color: #06070a;
+}
+
+.flip-card-back h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.flip-card-back p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* RESPONSIVIDAD DEL TABLERO */
+@media (max-width: 768px) {
+    .mosaico-grid {
+        grid-template-columns: repeat(2, 18rem);
+        grid-template-rows: auto;
+    }
+    .centro-chakana { display: none; } /* Oculta la novena para cuadrar en 2 columnas */
+    nav.gx-navbar { flex-direction: column; }
+}

@@ -1,0 +1,72 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      text-align: center;
+      color: #39445c;
+      background: linear-gradient(135deg, #fff3b0, #ffd6e7, #c9f2ff);
+    }
+
+    .tarjeta {
+      width: min(100%, 650px);
+      padding: 40px 24px;
+      border: 5px solid white;
+      border-radius: 28px;
+      background: rgb(255 255 255 / 90%);
+      box-shadow: 0 12px 30px rgb(65 80 120 / 15%);
+    }
+
+    .dibujos {
+      text-align: center;
+  
+
+    }
+
+    h1 {
+      margin: 15px 0 10px;
+      color: #ff718d;
+      font-size: clamp(1.8rem, 6vw, 2.2rem);
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 13px 22px;
+      border-radius: 30px;
+      background: #68c8b5;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .boton:hover {
+      background: #48ad99;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: #68738a;
+      font-size: 0.95rem;
+    }
+
+    .tam{
+      width: 400px;
+
+    }
+
+        .tam1{
+      width: 180px;
+
+    }

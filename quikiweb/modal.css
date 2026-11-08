@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  color: #eaffea;
+  background: #080b08;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.tarjeta {
+  width: min(100%, 20rem);
+  height: 26rem;
+  margin: 2rem auto;
+  perspective: 1000px;
+}
+
+.tarjeta-interior {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+/* La tarjeta gira al pasar el cursor o al enfocarla con el teclado */
+.tarjeta:hover .tarjeta-interior,
+.tarjeta:focus-within .tarjeta-interior {
+  transform: rotateY(180deg);
+}
+
+.tarjeta-frente,
+.tarjeta-reverso {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 2px solid #00ff66;
+  border-radius: 1rem;
+  background: #111811;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.tarjeta-frente img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.tarjeta-reverso {
+  transform: rotateY(180deg);
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: 1px solid #00ff66;
+  border-radius: 0.5rem;
+  color: #071007;
+  background: #00ff66;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #aaffc6;
+}
+
+/* Modal */
+.modal-juego {
+  width: min(90%, 42rem);
+  max-height: 85vh;
+  padding: 0;
+  border: 2px solid #00ff66;
+  border-radius: 1rem;
+  color: #eaffea;
+  background: #101510;
+  box-shadow: 0 0 2rem rgb(0 255 102 / 30%);
+}
+
+.modal-juego::backdrop {
+  background: rgb(0 0 0 / 80%);
+}
+
+.modal-contenido {
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.modal-cerrar {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  color: #eaffea;
+  background: #263326;
+  font-size: 1.5rem;
+}
+
+.modal-seccion {
+  margin-top: 1.5rem;
+}
+
+.modal-juego video,
+.modal-juego img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-interior {
+    transition: none;
+  }
+}

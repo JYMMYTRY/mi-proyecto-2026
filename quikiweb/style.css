@@ -1,0 +1,55 @@
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+    
+    .instrucciones {
+      color: #0277bd;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* --- ESTILOS DEL HUEVO DE PASCUA (STAR WARS) --- */
+    .espacio-starwars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      perspective: 500px;
+      perspective-origin: 50% 20%;
+    }
+
+    .creditos-starwars {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 70%;
+      max-width: 600px;
+      text-align: center;
+      color: #f5c518;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 32px;
+      line-height: 2;
+      transform: translateX(-50%) rotateX(25deg);
+      transform-origin: 50% 100%;
+    }
+
+    @keyframes avanceCreditos {
+      0% {
+        top: 100%;
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        top: -150%;
+        opacity: 0;
+      }
+    }
+

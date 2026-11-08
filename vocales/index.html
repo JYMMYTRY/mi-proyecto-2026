@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad: Vocales con Imágenes Reales</title>
+    <link rel="stylesheet" href="style.css">
+
+    <h1>🅰️ Une Vocales con sus Dibujos 🍇</h1>
+    <p>Haz clic en una imagen de la izquierda y conéctala con la vocal correcta de la derecha.</p>
+
+    <div class="juego-container" id="juego">
+        <!-- Lienzo interactivo para trazar las líneas de unión -->
+        <canvas id="lienzo"></canvas>
+
+        <!-- Columna Izquierda: Tarjetas cuadradas de imágenes -->
+        <div class="columna" id="col-izquierda"></div>
+
+        <!-- Columna Derecha: Tarjetas cuadradas de letras -->
+        <div class="columna" id="col-derecha"></div>
+    </div>
+
+    <!-- Botón para reiniciar con imágenes del banco al azar -->
+    <button class="btn-reiniciar" id="btn-reinicio" onclick="reiniciarJuego()">¡Jugar de nuevo! 🔄</button>
+

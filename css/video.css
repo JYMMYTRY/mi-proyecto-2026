@@ -1,0 +1,117 @@
+.boton-info {
+  background: yellow;
+  color: blue;
+  font-weight: bold;
+  border: .8px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 2px 14px;
+  white-space: nowrap;
+  display: inline-block;
+  
+}
+.tmodal{
+  color: #00ff00;
+  background: ;
+  font-size: 2.2rem;
+  padding:.8rem 1rem;
+  text-align: center;
+}
+
+
+dialog.modal {
+  border: solid 4px black;
+  border-radius: 10px;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+}
+
+dialog.modal::backdrop {
+  background: rgba(58, 184, 118, 0.75);
+}
+
+.modal-contenido {
+  background: rgba(0, 0, 0, 0.75);
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: min(96%, 1100px);
+  min-height: 70vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 5rem;
+  cursor: pointer;
+  color: yellow;
+  background: red;
+  border: solid white;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-contenido section {
+  margin-top: 1.5rem;
+  border: 1px solid #00ff00;
+  border-radius: 0.75rem;
+  color: #eaffea;
+  background: #101510;
+  padding: 1rem;
+}
+
+dialog img,
+dialog video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.75rem;
+}
+
+
+@media (max-width: 600px) {
+  .modal-contenido {
+    width: 96%;
+    max-height: 94vh;
+    padding: 15px;
+  }
+}
+
+
+/* =========================================================
+   VIDEO DEL MODAL PASCUA
+   Ajusta el tamaño sin modificar los videos de los otros modales
+   ========================================================= */
+#huevo-pascua-modal #video-personaje {
+  display: block;
+  width: min(70vw, 850px);
+  max-width: 90%;
+  height: auto;
+  max-height: 68vh;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+
+/* En celulares: video más estrecho y con menor altura */
+@media (max-width: 600px) {
+  #huevo-pascua-modal #video-personaje {
+    width: 90%;
+    max-width: 90vw;
+    max-height: 55vh;
+  }
+}

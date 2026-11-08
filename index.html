@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIKIWEB</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/colores.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="icon" href="./img/qlogo.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <header class="main-header">
+        <h1>
+            <img class="logo-interactivo" src="./img/QLOGO.PNG" alt="logo" width="44" height="auto"> 
+            BIENVENIDOS A QUIRKIWEB 
+            <img class="logo-interactivo" src="./img/QLOGO.PNG" alt="logo" width="44" height="auto">
+        </h1>
+        <p class="subtitle">DONDE ENCONTRARAS JUEGOS RECREATIVOS PARA PREESCOLAR</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <div class="mosaico-wrapper">
+            <div class="mosaico-grid">
+                
+                <!-- CASILLA 1 TANGRAM DE BRÜGNER-->
+               <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/tan.png');"></div>
+                        <div class="flip-card-back">
+                            <h3>TANGRAM DE BRÜGNER</h3>
+                            <p>Arma figuras geométricas usando solo tres piezas sin encimarlas.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-tangram"> Más información </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASILLA 2 LABERINTOS SIMPLES -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/lab.png');"></div>
+                        <div class="flip-card-back info-aux">
+                            <h3>LABERINTOS SIMPLES</h3>
+                            <p>Encuentra el camino correcto para guiar al personaje hasta la salida.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-laberinto"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CASILLA 3 UNIR VOCALES E IMÁGENES -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/voc.png');"></div>
+                        <div class="flip-card-back">
+                            <h3>VOCALES E IMÁGENES</h3>
+                            <p>Conecta cada vocal con la imagen cuya palabra comienza con esa letra.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-vocales"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CASILLA 4 LA TORRE DE HANOI-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/han.png');"></div>
+                        <div class="flip-card-back info-aux">
+                            <h3>LA TORRE DE HANOI</h3>
+                            <p>Mueve todos los discos de una torre a otra en el menor tiempo posible.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-hanoi"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASILLA 5 ARMADO DE PICTOGRAMAS -->
+                <div class="flip-card centro-chakana">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/pic.png');"></div>
+                        <div class="flip-card-back">
+                            <h3>ARMADO DE PICTOGRAMAS</h3>
+                            <p>Completa oraciones sencillas usando los pictogramas correctos.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-pictograma"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CASILLA 6 SECUENCIA DE PATRONES-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/pat.png');"></div>
+                        <div class="flip-card-back info-aux">
+                            <h3>PATRONES</h3>
+                            <p>Descubre la secuencia y selecciona la figura que sigue.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-patrones"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASILLA 7 DESENREDA LA CUERDA-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/cue.png');"></div>
+                        <div class="flip-card-back">
+                            <h3>DESENREDA LA CUERDA</h3>
+                            <p>Mueve los puntos para que las cuerdas dejen de cruzarse.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-cuerda"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASILLA 8 CANTIDAD Y NÚMEROS -->
+                 <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/can.png');"></div>
+                        <div class="flip-card-back info-aux">
+                            <h3>CANTIDAD Y NÚMERO</h3>
+                            <p>Cuenta los dedos de la mano y únelos con el número correcto.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-cantidad"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CASILLA 9 QUIKI-LOGO-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('./img/tor.png');"></div>
+                        <div class="flip-card-back">
+                            <h3>QUIRKI LOGO</h3>
+                            <p>Dale las instrucciones correctas al quirchincho para que llegue a su meta.</p>
+                            <button type="button" class="boton-info" data-abrir-modal="modal-quirkilogo"> Más información </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- PASCUA MODAL -->
+<div id="huevo-pascua-modal">
+    <button id="cerrar-sorpresa">X</button>
+    <h2 id="texto-sorpresa"></h2>
+    
+    <video id="video-personaje" playsinline loop controls></video>
+    <audio id="musica-exclusiva-starwars" src="./vid/the_awakening.mp3"></audio>
+
+    <!-- Créditos estilo Star Wars  -->
+    <div id="contenedor-creditos" class="espacio-starwars">
+        <div class="creditos-starwars" id="texto-animado-creditos">
+            <p style="color: #00d2d3;">SECRETO LIBERADO</p>
+            <p style="font-size: 48px; color: white;">LOS CREADORES MÁGICOS</p>
+            <br>
+            <p>En un jardín de niños muy, muy cercano...</p>
+            <p>Este hermoso sitio web fue diseñado con mucho amor y polvo de estrellas para divertir a los más pequeños.</p>
+            <br>
+            <p>🚀 EL EQUIPO 🚀</p>
+            <br>
+            <p>Diseño Creativo:<br><span style="color: white;">JIMMYTRIX</span></p>
+            <br>
+            <p>Programación Espacial:<br><span style="color: white;">WILSON JIMMY FUERTES SILVA</span></p>
+            <br>
+            <p>Música y Sonrisas:<br><span style="color: white;">Los Profesores <br> Los Estudiantes <br> Y <span style="color: #00d2d3;"> TÚ </span> mi querida/o APRENDIZ</span></p>
+            <br>
+            <p>Banda Sonora:<br><span style="color: white;">Christian Baczyk - The Awakening (Star Wars Tribute)</span><br><small style="color: #777; font-size: 0.8em;">(Música libre de derechos)</small></p>
+            <br>
+            <p>¡Gracias por jugar, explorar y nunca dejar de aprender con nosotros! 🎉</p>
+        </div>
+    </div>
+</div> <!-- CIERRE PASCUA MODAL -->
+
+<!-- MODALES DE LAS TARJETAS -->
+ 
+ <!-- MODAL 1 TANGRAM -->
+<dialog id="modal-tangram" aria-labelledby="titulo-tangram" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+
+    <h2 id="titulo-tangram" class="tmodal">TANGRAM DE BRÜGNER</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/tan.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es encontrar y trazar la ruta continua correcta que conecta el punto de inicio (o entrada) con la meta (o salida), evitando quedar atrapado en los caminos sin salida o caer en las trampas/obstáculos del recorrido. </p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Obligatoriedad de uso: Se deben usar las 3 piezas sin excepción para construir cada figura deseada.<br>
+Sin superposición: Las piezas deben apoyarse en una superficie plana tocándose únicamente por los bordes o vértices, sin encimarse unas sobre otras.<br>
+Libertad de rotación: Se permite girar, rotar y voltear libremente cualquiera de los tres triángulos rectángulos para hacerlos encajar.<br>
+Coincidencia de silueta: La figura resultante debe coincidir exactamente con la forma solicitada, garantizando que el contorno exterior sea limpio e impecable.</p>
+    </section>
+    <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 2 LABERINTOS -->
+<dialog id="modal-laberinto" aria-labelledby="titulo-laberinto" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-laberinto" class="tmodal">LABERINTOS</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/lab1.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es encontrar y trazar la ruta continua correcta que conecta el punto de inicio (o entrada) con la meta (o salida), evitando quedar atrapado en los caminos sin salida o caer en las trampas/obstáculos del recorrido.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Continuidad del trazado: El recorrido debe ser una línea o trayectoria continua. No está permitido «saltar» o atravesar muros ni paredes del laberinto.<br>
+Respetar entrada y salida: Se debe comenzar estrictamente en el punto designado como entrada/inicio y finalizar en la salida/meta.<br>
+Regreso en callejones sin salida: Si un camino termina en un muro o bloqueo, se debe retroceder sobre el propio camino hasta el último cruce o intersección para intentar con una ruta alternativa.
+</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 3 VOCALES -->
+<dialog id="modal-vocales" aria-labelledby="titulo-vocales" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-vocales" class="tmodal">UNIR VOCALES</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/voc.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es identificar el sonido inicial de cada imagen y trazar o colocar una línea/conector hacia la vocal correspondiente.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Correspondencia biunívoca: Cada imagen se debe unir únicamente con la vocal con la que inicia su nombre (ejemplo: la imagen de un Anillo solo se une con la vocal A).<br>
+Sin repetir trazo libremente: No se deben trazar líneas al azar; cada línea debe partir del punto/ficha de la imagen e ir directamente al punto/ficha de la vocal correcta.<br>
+Completar la ficha: El juego o reto se da por finalizado con éxito cuando todas las imágenes de la actividad están correctamente asociadas a sus vocales correspondientes.
+</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 4 TORRE DE HANOI -->
+<dialog id="modal-hanoi" aria-labelledby="titulo-hanoi" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-hanoi" class="tmodal">TORRE DE HANOI</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/han.png" alt="Tutorial del juego" class="modconte"
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo es trasladar toda la pila de discos desde el poste de inicio hasta uno de los otros postes (poste destino), reconstruyendo exactamente la torre en el mismo orden de menor a mayor de arriba abajo, utilizando el menor número de movimientos posible.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Un solo disco a la vez: En cada movimiento solo se puede desplazar un único disco de un poste a otro.<br>
+Solo el disco superior: Únicamente se puede tomar el disco que esté posicionado en la cima o parte superior de cualquier pila.<br> 
+No se pueden extraer discos "atrapados" debajo de otros.   Respetar el tamaño: Ningún disco puede colocarse sobre otro disco de menor tamaño que él. Un disco más grande nunca puede quedar apoyado encima de uno más pequeño.</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 5 PICTOGRAMAS -->
+<dialog id="modal-pictograma" aria-labelledby="titulo-pictograma" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-pictograma" class="tmodal">ARMADO DE PICTOGRAMAS</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/pic.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es completar el párrafo seleccionando la imagen adecuada para cada espacio en blanco, de modo que la oración resultante tenga sentido gramatical, sintáctico y semántico.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Concordancia gramatical obligatoria: Las imágenes elegidas deben coincidir con las palabras precedentes:   Tras la palabra «El», debe ir un sustantivo masculino (ej. El oso o El gusano).<br>   Tras «la» o «una», debe ir un sustantivo femenino (ej. la oveja, una olla).   Uso único de cada imagen: Cada tarjeta con dibujo se debe utilizar una sola vez para rellenar los espacios en blanco del texto.   
+Lectura completa de verificación: Al finalizar la colocación de todos los pictogramas, el estudiante debe leer en voz alta la historia completa para verificar que tenga sentido de principio a fin.</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 6 PATRONES -->
+<dialog id="modal-patrones" aria-labelledby="titulo-patrones" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-patrones" class="tmodal">PATRONES</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/pat.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es analizar, descomponer y reconstruir la secuencia geométrica del patrón central completando los cuatro recuadros inferiores en el orden correspondiente.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Análisis de la figura central: Observar detenidamente el mosaico grande superior e identificar la composición de sus 4 cuadrantes (superior izquierdo, superior derecho, inferior izquierdo e inferior derecho).<br> 
+Correspondencia de posición: Colocar o dibujar en los cuatro recuadros inferiores el patrón de cada cuadrante respetando estrictamente su posición y la orientación de los triángulos:   Primer cuadro: Corresponde al cuadrante superior izquierdo.   Segundo cuadro: Corresponde al cuadrante superior derecho.   Tercer cuadro: Corresponde al cuadrante inferior izquierdo.<br> 
+Cuarto cuadro: Corresponde al cuadrante inferior derecho.<br>    
+Respeto a la paleta de colores y orientación: Los triángulos de cada recuadro deben pintarse o colocarse con los mismos colores (azul, verde, amarillo, rojo) y en la misma posición angular que la figura de referencia.<br> 
+Verificación por simetría: Al finalizar los 4 cuadros, el estudiante debe comprobar que al unirlos visualmente se reconstruye exactamente la figura patrón original.</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 7 CUERDA -->
+<dialog id="modal-cuerda" aria-labelledby="titulo-cuerda" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-cuerda" class="tmodal">DESENREDA LA CUERDA</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/cue.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es mover y posicionar los puntos azules hasta lograr que la cuerda o liga quede totalmente desenredada, formando una figura poligonal simple u ovalada/circular abierta sin ningún cruce de líneas.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Intersecciones prohibidas: El reto se da por superado únicamente cuando ninguna línea o tramo de cuerda se cruce por encima de otro.<br>
+Arrastre de nodos: Solo se pueden mover y reorganizar los puntos azules; las cuerdas o líneas rojas se adaptan estirándose o encogiéndose según la posición de sus extremos.<br>
+Mantenimiento del lazo: No está permitido romper o desconectar la cuerda; la secuencia de conexión entre los puntos azules se mantiene fija en todo momento.<br>
+Resultado final: La cuerda debe quedar distribuida periféricamente abriendo un espacio central limpio (similar a un círculo, estrella sin cruces o polígono convexo).  </p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 8 CANTIDAD -->
+<dialog id="modal-cantidad" aria-labelledby="titulo-cantidad" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-cantidad" class="tmodal">UNIR CANTIDAD Y NÚMEROS</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/can.png" alt="Tutorial del juego" class="modconte">
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es vincular la representación abstracta de un número con su valor real de cantidad (cardinalidad).</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Conteo previo obligatorio: Antes de trazar cualquier línea, el jugador debe contar en voz alta los elementos del grupo para saber de qué cantidad se trata.<br>
+Correspondencia exacta (Uno a uno): Cada grupo de objetos debe unirse únicamente con el número que refleje su cantidad exacta (por ejemplo, un grupo de 4 manzanas solo puede unirse con el número $4$).Claridad en los trazos: Las líneas que conectan la cantidad con el número deben ser limpias y ordenadas, procurando que no se crucen de forma confusa con otras uniones.<br>
+Comprobación final: El ejercicio se considera completado de manera exitosa cuando todos los números tienen su respectiva cantidad enlazada y verificada.</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+<!-- MODAL 9 QUIRKILOGO -->
+<dialog id="modal-quirkilogo" aria-labelledby="titulo-quirkilogo" class="modal">
+  <div class="modal-contenido">
+    <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+    <h2 id="titulo-quirkilogo" class="tmodal">QUIRKILOGO</h2>
+
+    <section>
+      <h3>Tutorial</h3>
+      <img src="./img/tor.png" alt="Tutorial del juego" class="modconte">
+
+    </section>
+
+    <section>
+      <h3>Objetivos del juego</h3>
+      <p class="modletra">El objetivo principal es guiar a la tortuga mediante secuencias de comandos para dibujar figuras geométricas, patrones o solucionar retos espaciales.</p>
+    </section>
+
+    <section>
+      <h3>Reglas para los papás</h3>
+      <p class="modletra">Secuencia lógica e individual: La tortuga ejecuta una orden a la vez, estrictamente en el orden en que se le escriben. <br>
+        Comandos de movimiento y dirección: AVANCE / AV ($n$): La tortuga avanza $n$ pasos dibujando una línea (ej. AV 100).<br>
+        RETROCEDE / RE ($n$): La tortuga retrocede $n$ pasos (ej. RE 50).<br>
+        GIRADERECHA / GD ($grados$): La tortuga gira hacia su derecha el ángulo indicado (ej. GD 90).<br>
+        GIRAIZQUIERDA / GI ($grados$): La tortuga gira hacia su izquierda el ángulo indicado (ej. GI 90).Control del trazo:.</p>
+    </section>
+        <section>
+        <div class="conten-btn">
+     <a href="./html/const.html" class="btn-jugar"> IR A JUGAR</a>
+        </div>
+    </section>
+  </div>
+</dialog>
+
+
+
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/modaltar.js"></script>
+</body>
+</html>
