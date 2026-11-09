@@ -299,25 +299,42 @@ margin: 0 auto;
 }
 
 
-/* Adaptación para celulares y pantallas pequeñas */
+/* Adaptación 3x3 proporcional para celulares */
 @media (max-width: 768px) {
-  .mosaico-wrapper {
-    width: 92% !important;
+  body {
     height: auto !important;
-    margin: 20px auto !important;
-    padding: 15px !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+  }
+
+  .mosaico-wrapper {
+    width: 94vw !important;
+    height: 94vw !important; /* Mantiene el marco perfectamente cuadrado */
+    max-width: 420px !important;
+    max-height: 420px !important;
+    margin: 30px auto !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
   }
 
   .mosaico-grid {
     display: grid !important;
-    grid-template-columns: 1fr !important; /* 1 tarjeta por fila (o usa "1fr 1fr" para 2 columnas) */
-    gap: 20px !important;
-    height: auto !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   .flip-card {
     width: 100% !important;
-    height: 260px !important; /* Altura fija para que no se aplaste */
+    height: 100% !important;
+    min-height: 0 !important;
     position: relative !important;
+  }
+
+  .flip-card-front {
+    background-size: cover !important;
+    background-position: center !important;
   }
 }
