@@ -299,7 +299,9 @@ margin: 0 auto;
 }
 
 
-/* Adaptación 3x3 proporcional para celulares */
+/* =========================================================
+   ADAPTACIÓN COMPLETA Y RESPONSIVA PARA CELULARES
+   ========================================================= */
 @media (max-width: 768px) {
   body {
     height: auto !important;
@@ -326,6 +328,7 @@ margin: 0 auto;
     height: 100% !important;
   }
 
+  /* Asegura que las 9 tarjetas (incluida la del centro) se vean */
   .mosaico-grid > div,
   .flip-card,
   .flip-card:nth-child(5) {
@@ -344,9 +347,10 @@ margin: 0 auto;
     background-size: cover !important;
     background-position: center !important;
   }
-      /* Ajuste de la parte trasera (.flip-card-back) en celulares */
+
+  /* Parte trasera centrada con título y botón visible */
   .flip-card-back {
-    padding: 6px !important;
+    padding: 4px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -356,23 +360,30 @@ margin: 0 auto;
     text-align: center !important;
   }
 
-  .flip-card-back h3 {
-    font-size: 10px !important;
+  .flip-card-back h3,
+  .flip-card-back h2 {
+    font-size: 9px !important;
     line-height: 1.1 !important;
-    margin: 0 0 3px 0 !important;
+    margin: 0 0 6px 0 !important;
+    max-width: 100% !important;
   }
 
+  /* Oculta la descripción larga solo en celular para dar espacio al botón */
   .flip-card-back p {
-    font-size: 8px !important;
-    line-height: 1.15 !important;
-    margin: 0 0 5px 0 !important;
+    display: none !important;
   }
 
-  .flip-card-back .boton-info,
-  .flip-card-back button {
+  /* Estiliza el botón o enlace de "Más información" */
+  .flip-card-back a,
+  .flip-card-back button,
+  .flip-card-back .btn,
+  .flip-card-back .boton-info {
+    display: inline-block !important;
     font-size: 8px !important;
-    padding: 3px 6px !important;
-    line-height: 1 !important;
+    padding: 4px 6px !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    max-width: 95% !important;
+    white-space: normal !important;
   }
-
 }
