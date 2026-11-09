@@ -297,3 +297,27 @@ height: auto;
 display: block;
 margin: 0 auto;
 }
+
+
+/* Adaptación para celulares y pantallas pequeñas */
+@media (max-width: 768px) {
+  .mosaico-wrapper {
+    width: 92% !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    padding: 15px !important;
+  }
+
+  .mosaico-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1 tarjeta por fila (o usa "1fr 1fr" para 2 columnas) */
+    gap: 20px !important;
+    height: auto !important;
+  }
+
+  .flip-card {
+    width: 100% !important;
+    height: 260px !important; /* Altura fija para que no se aplaste */
+    position: relative !important;
+  }
+}
