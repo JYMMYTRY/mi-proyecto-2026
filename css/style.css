@@ -344,4 +344,35 @@ margin: 0 auto;
     background-size: cover !important;
     background-position: center !important;
   }
+      /* Ajuste de la parte trasera (.flip-card-back) en celulares */
+  .flip-card-back {
+    padding: 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .flip-card-back h3 {
+    font-size: 10px !important;
+    line-height: 1.1 !important;
+    margin: 0 0 3px 0 !important;
+  }
+
+  .flip-card-back p {
+    font-size: 8px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 5px 0 !important;
+  }
+
+  .flip-card-back .boton-info,
+  .flip-card-back button {
+    font-size: 8px !important;
+    padding: 3px 6px !important;
+    line-height: 1 !important;
+  }
+
 }
