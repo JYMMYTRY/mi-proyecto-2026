@@ -70,3 +70,28 @@
       width: 180px;
 
     }
+
+.estilobtn{
+    display: inline-block;
+
+    padding: 12px 28px;
+
+    background: linear-gradient(to right, #34ebbd, #0066ff);
+
+    color: #ffffff;
+
+    font-family: sans-serif;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    border-radius: 50px;
+
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    }
+.volver{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    }
